@@ -9,6 +9,7 @@
 package main
 
 import (
+	"github.com/gq-tang/device-sdk-go/v2"
 	"github.com/gq-tang/device-sdk-go/v2/example/driver"
 	"github.com/gq-tang/device-sdk-go/v2/pkg/startup"
 )
@@ -19,5 +20,5 @@ const (
 
 func main() {
 	sd := driver.SimpleDriver{}
-	startup.Bootstrap(serviceName, device.Version, &sd)
+	startup.Bootstrap(serviceName, device.Version, &sd, nil)
 }
