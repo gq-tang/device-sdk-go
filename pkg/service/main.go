@@ -8,6 +8,7 @@ package service
 
 import (
 	"context"
+	"github.com/edgexfoundry/go-mod-core-contracts/v2/clients/logger"
 	"os"
 	"sync"
 
@@ -32,7 +33,7 @@ const EnvInstanceName = "EDGEX_INSTANCE_NAME"
 
 var instanceName string
 
-func Main(serviceName string, serviceVersion string, proto interface{}, ctx context.Context, cancel context.CancelFunc, router *mux.Router) {
+func Main(serviceName string, serviceVersion string, proto interface{}, ctx context.Context, cancel context.CancelFunc, router *mux.Router, lc logger.LoggingClient) {
 	startupTimer := startup.NewStartUpTimer(serviceName)
 
 	additionalUsage :=
@@ -48,6 +49,7 @@ func Main(serviceName string, serviceVersion string, proto interface{}, ctx cont
 	ds.Initialize(serviceName, serviceVersion, proto)
 
 	ds.flags = sdkFlags
+	ds.LoggingClient = lc
 
 	ds.dic = di.NewContainer(di.ServiceConstructorMap{
 		container.ConfigurationName: func(get di.Get) interface{} {
@@ -64,6 +66,9 @@ func Main(serviceName string, serviceVersion string, proto interface{}, ctx cont
 		},
 		container.DeviceValidatorName: func(get di.Get) interface{} {
 			return ds.validator
+		},
+		bootstrapContainer.LoggingClientInterfaceName: func(get di.Get) interface{} {
+			return ds.LoggingClient
 		},
 	})
 
