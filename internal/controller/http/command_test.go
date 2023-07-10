@@ -28,11 +28,11 @@ import (
 	"github.com/stretchr/testify/mock"
 	"github.com/stretchr/testify/require"
 
-	"github.com/edgexfoundry/device-sdk-go/v2/internal/cache"
-	"github.com/edgexfoundry/device-sdk-go/v2/internal/config"
-	"github.com/edgexfoundry/device-sdk-go/v2/internal/container"
-	sdkModels "github.com/edgexfoundry/device-sdk-go/v2/pkg/models"
-	"github.com/edgexfoundry/device-sdk-go/v2/pkg/models/mocks"
+	"github.com/gq-tang/device-sdk-go/v2/internal/cache"
+	"github.com/gq-tang/device-sdk-go/v2/internal/config"
+	"github.com/gq-tang/device-sdk-go/v2/internal/container"
+	sdkModels "github.com/gq-tang/device-sdk-go/v2/pkg/models"
+	"github.com/gq-tang/device-sdk-go/v2/pkg/models/mocks"
 )
 
 const (

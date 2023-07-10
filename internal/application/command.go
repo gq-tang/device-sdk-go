@@ -19,11 +19,11 @@ import (
 
 	"github.com/edgexfoundry/go-mod-core-contracts/v2/clients/http/utils"
 
-	"github.com/edgexfoundry/device-sdk-go/v2/internal/cache"
-	sdkCommon "github.com/edgexfoundry/device-sdk-go/v2/internal/common"
-	"github.com/edgexfoundry/device-sdk-go/v2/internal/container"
-	"github.com/edgexfoundry/device-sdk-go/v2/internal/transformer"
-	sdkModels "github.com/edgexfoundry/device-sdk-go/v2/pkg/models"
+	"github.com/gq-tang/device-sdk-go/v2/internal/cache"
+	sdkCommon "github.com/gq-tang/device-sdk-go/v2/internal/common"
+	"github.com/gq-tang/device-sdk-go/v2/internal/container"
+	"github.com/gq-tang/device-sdk-go/v2/internal/transformer"
+	sdkModels "github.com/gq-tang/device-sdk-go/v2/pkg/models"
 
 	bootstrapContainer "github.com/edgexfoundry/go-mod-bootstrap/v2/bootstrap/container"
 	"github.com/edgexfoundry/go-mod-bootstrap/v2/di"

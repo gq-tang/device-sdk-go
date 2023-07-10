@@ -12,7 +12,7 @@ import (
 	"github.com/edgexfoundry/go-mod-core-contracts/v2/common"
 	"github.com/edgexfoundry/go-mod-core-contracts/v2/errors"
 
-	"github.com/edgexfoundry/device-sdk-go/v2/pkg/models"
+	"github.com/gq-tang/device-sdk-go/v2/pkg/models"
 )
 
 func isNaN(cv *models.CommandValue) (bool, errors.EdgeX) {

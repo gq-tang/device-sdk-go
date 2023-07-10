@@ -1,4 +1,4 @@
-module github.com/edgexfoundry/device-sdk-go/v2
+module github.com/gq-tang/device-sdk-go/v2
 
 go 1.18
 

@@ -16,7 +16,7 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/edgexfoundry/device-sdk-go/v2/pkg/models"
+	"github.com/gq-tang/device-sdk-go/v2/pkg/models"
 )
 
 func Test_transformReadBase(t *testing.T) {

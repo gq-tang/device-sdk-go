@@ -23,10 +23,10 @@ import (
 
 	"github.com/gorilla/mux"
 
-	"github.com/edgexfoundry/device-sdk-go/v2/internal/autodiscovery"
-	"github.com/edgexfoundry/device-sdk-go/v2/internal/autoevent"
-	"github.com/edgexfoundry/device-sdk-go/v2/internal/container"
-	"github.com/edgexfoundry/device-sdk-go/v2/internal/controller/messaging"
+	"github.com/gq-tang/device-sdk-go/v2/internal/autodiscovery"
+	"github.com/gq-tang/device-sdk-go/v2/internal/autoevent"
+	"github.com/gq-tang/device-sdk-go/v2/internal/container"
+	"github.com/gq-tang/device-sdk-go/v2/internal/controller/messaging"
 )
 
 const EnvInstanceName = "EDGEX_INSTANCE_NAME"

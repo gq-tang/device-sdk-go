@@ -26,8 +26,8 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/edgexfoundry/device-sdk-go/v2/internal/container"
-	"github.com/edgexfoundry/device-sdk-go/v2/pkg/models/mocks"
+	"github.com/gq-tang/device-sdk-go/v2/internal/container"
+	"github.com/gq-tang/device-sdk-go/v2/pkg/models/mocks"
 )
 
 var mockDevice = requests.AddDeviceRequest{

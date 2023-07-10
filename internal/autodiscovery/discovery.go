@@ -11,7 +11,7 @@ import (
 
 	"github.com/edgexfoundry/go-mod-core-contracts/v2/clients/logger"
 
-	"github.com/edgexfoundry/device-sdk-go/v2/pkg/models"
+	"github.com/gq-tang/device-sdk-go/v2/pkg/models"
 )
 
 type discoveryLocker struct {

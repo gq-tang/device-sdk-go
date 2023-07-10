@@ -11,8 +11,8 @@ import (
 	"context"
 	"github.com/edgexfoundry/go-mod-core-contracts/v2/clients/logger"
 
-	"github.com/edgexfoundry/device-sdk-go/v2/pkg/service"
 	"github.com/gorilla/mux"
+	"github.com/gq-tang/device-sdk-go/v2/pkg/service"
 )
 
 func Bootstrap(serviceName string, serviceVersion string, driver interface{}, lc logger.LoggingClient) {
