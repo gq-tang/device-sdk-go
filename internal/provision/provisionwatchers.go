@@ -26,6 +26,7 @@ import (
 	"github.com/edgexfoundry/go-mod-core-contracts/v2/dtos/requests"
 	"github.com/edgexfoundry/go-mod-core-contracts/v2/errors"
 	"github.com/google/uuid"
+	"gopkg.in/yaml.v3"
 )
 
 func LoadProvisionWatchers(path string, dic *di.Container) errors.EdgeX {
