@@ -13,6 +13,12 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
+	"os"
+	"path/filepath"
+	"strings"
+
+	"github.com/gq-tang/device-sdk-go/v2/internal/cache"
+
 	bootstrapContainer "github.com/edgexfoundry/go-mod-bootstrap/v2/bootstrap/container"
 	"github.com/edgexfoundry/go-mod-bootstrap/v2/di"
 	"github.com/edgexfoundry/go-mod-core-contracts/v2/common"
@@ -20,11 +26,6 @@ import (
 	"github.com/edgexfoundry/go-mod-core-contracts/v2/dtos/requests"
 	"github.com/edgexfoundry/go-mod-core-contracts/v2/errors"
 	"github.com/google/uuid"
-	"github.com/gq-tang/device-sdk-go/v2/internal/cache"
-	"gopkg.in/yaml.v3"
-	"os"
-	"path/filepath"
-	"strings"
 )
 
 func LoadProvisionWatchers(path string, dic *di.Container) errors.EdgeX {
