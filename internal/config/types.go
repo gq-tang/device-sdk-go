@@ -45,6 +45,8 @@ type DeviceInfo struct {
 	// DevicesDir specifies a directory contains devices files which should be imported on startup.
 	DevicesDir string
 	// UpdateLastConnected specifies whether to update device's LastConnected
+	ProvisionWatchersDir string
+	// ProvisionWatchersDir specifies whether to update provision watcher LastConnected
 	// timestamp in metadata.
 	UpdateLastConnected bool
 

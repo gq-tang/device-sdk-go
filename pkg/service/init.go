@@ -79,6 +79,12 @@ func (b *Bootstrap) BootstrapHandler(ctx context.Context, wg *sync.WaitGroup, st
 		return false
 	}
 
+	err = provision.LoadProvisionWatchers(ds.config.Device.ProvisionWatchersDir, dic)
+	if err != nil {
+		ds.LoggingClient.Errorf("Failed to create the pre-defined devices: %v", err)
+		return false
+	}
+
 	ds.manager.StartAutoEvents()
 
 	// Very important that this handler is called after the NewServiceMetrics handler so
