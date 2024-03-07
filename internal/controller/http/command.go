@@ -89,7 +89,8 @@ func (c *RestController) SetCommand(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	res := commonDTO.NewBaseResponse("", "", http.StatusOK)
+	correlationID := r.Header.Get(common.CorrelationHeader)
+	res := commonDTO.NewBaseResponse(correlationID, "", http.StatusOK)
 	c.sendResponse(w, r, common.ApiDeviceNameCommandNameRoute, res, http.StatusOK)
 }
 

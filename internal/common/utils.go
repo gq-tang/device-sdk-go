@@ -104,8 +104,12 @@ func SendEvent(event *dtos.Event, correlationID string, dic *di.Container) {
 	}
 
 	if sent {
-		eventsSent.Inc(1)
-		readingsSent.Inc(int64(len(event.Readings)))
+		if eventsSent != nil {
+			eventsSent.Inc(1)
+		}
+		if readingsSent != nil {
+			readingsSent.Inc(int64(len(event.Readings)))
+		}
 	}
 }
 
