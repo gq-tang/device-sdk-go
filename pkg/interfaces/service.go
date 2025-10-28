@@ -6,6 +6,7 @@
 package interfaces
 
 import (
+	"github.com/gorilla/mux"
 	"net/http"
 
 	"github.com/edgexfoundry/go-mod-bootstrap/v2/bootstrap/interfaces"
@@ -109,6 +110,8 @@ type DeviceServiceSDK interface {
 
 	// AddRoute allows leveraging the existing internal web server to add routes specific to Device Service.
 	AddRoute(route string, handler func(http.ResponseWriter, *http.Request), methods ...string) error
+
+	GetRoute() *mux.Router
 
 	// Stop shuts down the Service
 	Stop(force bool)

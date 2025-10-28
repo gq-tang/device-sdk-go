@@ -172,6 +172,10 @@ func (s *DeviceService) AddRoute(route string, handler func(http.ResponseWriter,
 	return s.controller.AddRoute(route, handler, methods...)
 }
 
+func (s *DeviceService) GetRoute() *mux.Router {
+	return s.controller.Router()
+}
+
 // Stop shuts down the Service
 func (s *DeviceService) Stop(force bool) {
 	if s.initialized {
